@@ -1,0 +1,90 @@
+<head>
+<body>
+
+<h2> my first web page </h2>
+<p id = "demo" > </p>
+
+<p id ="tambah"></p>
+<p id ="mod"></p>
+<p id ="kurang"></p>
+
+<button id="dom" onclick="dom()">PRODI</button>
+<script>
+document.getElementById("demo").innerHTML = 5+6;
+var length = 2;
+var width = 10;
+
+var tambah = length + width;
+var mod =  length % width; 
+var kurang =  width - length; 
+
+
+document.getElementById("tambah").innerHTML = tambah;
+document.getElementById("mod").innerHTML = mod;
+document.getElementById("kurang").innerHTML = kurang;
+
+var uns = ["fmipa", "fkip","ft","fk"];
+uns.push("fp");
+console.log(uns);
+
+var x = uns.length;
+var y = uns.sort();
+
+console.log(x);
+
+console log(y);
+document.write(y);
+
+function myfunction(p1,p2){
+	return p1*p2;
+    }
+
+console.log(myfunction(20,30));
+
+var text = "";
+for(i=0;1<5;i++){
+	text += i + ", ";
+	}
+
+console.log(text);	
+
+var text2 = "";
+while (i < 10 ) {
+	text2 += i + ", ";
+	i++;
+	}
+
+console.log(text2);	
+
+do{
+	text3 += i + ", ";
+	i++;
+	}
+	while(i <= 13 );
+
+console.log(text3);	
+
+function dom(){
+	document.getElementById("dom").innerHTML="S1 informatika";
+	}
+
+
+function validate(){
+	var validasi=document.forms["myform"]["fname"].value;
+	if (valudasi==null | validasi==""){
+	alert("fisrtname harus diisi");
+	return false;
+	}
+}
+
+</script>
+<form name="myform" action="demo_form.asp" 
+onsubmit="return validate()" method="post">
+fisrt name  : <input type= "text" name="fname">
+<input type="submit" value="submit">
+
+</form>
+
+</body>
+
+</head>
